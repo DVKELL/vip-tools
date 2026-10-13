@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/calculadora.css" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <header>
+      <nav class="return__nav">
+        <ul class="return__ul">
+          <li class="return__li"><a href="vip.html">Tipificaciones VIP</a></li>
+          <li class="return__li">
+            <a href="rrss.html">Tipificaciones RRSS</a>
+          </li>
+          <li class="return__li"><a href="index.html">Volver </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <form id="form">
+        <div class="form__group">
+          <label for="monedaInput">Selecciona la moneda</label>
+          <select name="tipoBono" id="monedaInput">
+            <option selected disabled value="">--Selecciona--</option>
+            <option value="VES">VES</option>
+            <option value="CLP">CLP</option>
+            <option value="PEN">PEN</option>
+            <option value="USD">USD</option>
+            <option value="CRC">CRC</option>
+            <option value="MXN">MXN</option>
+            <option value="ARS">ARS</option>
+            <option value="HNL">HNL</option>
+            <option value="GTQ">GTQ</option>
+            <option value="BOB">BOB</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="tipoBonoInput">Selecciona el tipo de bono</label>
+          <select name="tipoBono" id="tipoBonoInput">
+            <option selected disabled value="">--Selecciona--</option>
+            <option value="casinovip">CASINOVIP 50%</option>
+            <option value="sportvip">SPORTVIP 55%</option>
+            <option value="envivovip">ENVIVOVIP 45%</option>
+            <option value="finvipx21">FINVIPX21 (CASINO)</option>
+            <option value="finvipx19">FINVIPX19 (SPORT)</option>
+            <option value="copavip">COPAVIP (SPORT)</option>
+            <option value="proactive">PROACTIVES (LIBRES)</option>
+            <option value="cumplevip4">MICUMPLEVIP140</option>
+            <option value="cumplevip5">MICUMPLEVIP150</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label for="depositoInput">Cantidad de deposito</label>
+          <input type="text" id="depositoInput" />
+        </div>
+        <div class="form__group">
+          <label for="porcentajeInput">Porcentaje del bono</label>
+          <input type="text" id="porcentajeInput" />
+        </div>
+        <div class="form__group">
+          <label for="rolloverInput">Cantidad de rollover</label>
+          <input type="text" id="rolloverInput" />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="showSpeech" class="shows">
+        <p id="speech1" class="speech__p"></p>
+        <p id="speech2" class="speech__p"></p>
+        <p id="speech3" class="speech__p"></p>
+        <p id="nomenclatura" class="speech__p"></p>
+      </div>
+      <div class="shows">
+        <!-- <button id="btnCopiar" class="copyButton">Copiar</button> -->
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__p">Desarrollado por Daikell Dominguez &copy;</p>
+    </footer>
+    <script src="js/home.js"></script>
+    <script type="module" src="js/calculadora.js"></script>
+    <script type="module" src="data/speech.COPAVIP.js"></script>
+    <script type="module" src="data/CUMPLEVIP/tycCumplevip.js"></script>
+    <script type="module" src="data/CUMPLEVIP/speech.CUMPLEVIP.js"></script>
+  </body>
+</html>

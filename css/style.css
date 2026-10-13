@@ -1,0 +1,215 @@
+:root{
+  --white: #fff;
+  --bg-blue: #0077cc;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+.return__nav{
+  background-color: var(--bg-blue);
+  padding: 10px;
+  height: 3rem;
+}
+
+
+.return__li{
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+}
+
+.return__ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.return__li a{
+  color: white;
+  text-decoration: none;
+}
+
+/* 🎨 Estilos generales */
+.form__container {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 5rem);
+
+}
+
+.form__container > h1{
+  margin-bottom: 1.5rem;
+}
+
+/* 🧾 Contenedor del formulario */
+.form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ✏️ Campo de entrada */
+.form__input {
+  width: 80%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.form__input:focus {
+  border-color: var(--bg-blue);
+  outline: none;
+}
+
+/* ✅ Botón */
+button {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--bg-blue);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnCopiar{
+  width: auto;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.form__group{
+  display: flex;
+  flex-direction: column;
+}
+ 
+.output{
+  margin-top: 1rem;
+  background-color: rgba(207, 46, 46, 0.938);
+  color: var(--white);
+  padding: .8rem;
+  border-radius: 10px;
+  display: none;
+  font-weight: bold;
+}
+
+/*Estilos del home*/
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 35px);
+  background-color: #005fa3;
+}
+
+.home__container{
+  width: 80%;
+  max-width: 1000px;
+  height: 20rem;
+  background-color: var(--white);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+
+.form__input--m{
+  margin-bottom: 1.3rem;
+}
+
+.home__title{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.calculadora__container{
+  background-color: var(--white);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculadora__title{
+  margin-bottom: 3rem;
+}
+
+.calculadora__link{
+  background-color: #fac231;
+  padding: 1rem 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  color: rgb(75, 73, 73);
+  font-weight: 600;
+  transition: all 300ms ease;
+}
+
+.calculadora__link:hover{
+  background-color: #dda415;
+}
+
+
+.footer{
+  height: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+}
+
+
+@media (max-width: 700px) {
+  body{
+    min-height: 100vh;
+  }
+  .home__container{
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 5%;
+    height: auto;
+  }
+
+  .calculadora__container{
+    background-color: var(--white);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+.form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+}

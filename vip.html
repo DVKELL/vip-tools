@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tickets VIP</title>
+</head>
+
+<body> 
+    <header>
+        <nav class="return__nav">
+            <ul class="return__ul">
+                <li class="return__li"><a href="rrss.html">Tipificaciones RRSS</a></li>
+                <li class="return__li"><a href="calculadora.html">Calculadora</a></li>
+                <li class="return__li"><a href="index.html">Volver </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form__container">
+        <h1>Tickets VIP</h1>
+        <form id="form" class="form" name="devForm">
+            <div class="form__group">
+                <label for="moneda">Moneda</label>
+                <select name="moneda" id="moneda" class="form__input">
+                    <option value="" selected disabled>--Selecciona una Moneda--</option>
+                    <option value="VES">VES</option>
+                    <option value="CLP">CLP</option>
+                    <option value="PEN">PEN</option>
+                    <option value="USD">USD</option>
+                    <option value="MXN">MXN</option>
+                    <option value="CRC">CRC</option>
+                    <option value="ARS">ARS</option>
+                    <option value="CAD">CAD</option>
+                    <option value="HNL">HNL</option>
+                    <option value="GTQ">GTQ</option>
+                    <option value="BOB">BOB</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="hrInicio">Hora de inicio</label>
+                <input type="time" step="60" id="hrInicio" class="form__input">
+            </div>
+            <div class="form__group">
+                <label for="hrFin">Hora de finalización</label>
+                <input type="time" id="hrFin" class="form__input">
+            </div>
+            <button type="submit">Validar</button>
+        </form>
+
+        <div>
+            <p class="output" id="output"></p>
+            <button id="showOuput" class="btnCopiar">Copiar</button>
+        </div>
+        
+    </div>
+    <footer class="footer">
+        <p class="footer__p">Desarrollado por Daikell Dominguez &copy;</p>
+    </footer>
+    <script src="js/home.js"></script>
+    <script src="js/vip.js"></script>
+</body>
+</html>

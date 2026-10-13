@@ -1,0 +1,137 @@
+:root{
+    --color1: #f8ca33;/* amarillo vibrante */
+    --bg-black: #1f1f1f; /* negro profundo */
+    --bg-color1-hover: #fad96c;
+    --gray: #333;
+    --yellow-active: #ffd700;
+    --white: #d1c3c3;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌙 Fondo general */
+body {
+  background-color: var(--bg-black); /* negro profundo */
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+}
+
+.container{
+  margin-top: 1rem;
+  color: var(--white); /* amarillo vibrante */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 110px);
+
+}
+
+/* 🧾 Contenedor del formulario */
+form {
+  background-color: #1a1a1a;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(251, 225, 34, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 2rem;
+}
+
+/* ✏️ Campos de entrada */
+input[type="text"],
+select {
+  min-width: 80%;
+  padding: 0.5rem 0.3rem;
+  margin-bottom: 0.5rem;
+  background-color: #0d0d0d;
+  border: 1px solid var(--gray);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--yellow-active);
+}
+
+/* ✅ Botón */
+button,
+.copyButton {
+  width: 80%;
+  padding: 0.75rem;
+  background-color: var(--color1);
+  color: #0d0d0d;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--bg-color1-hover);
+}
+
+/* 💬 Mensajes de error */
+p.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.shows{
+  width: 100%;
+  max-width: 500px;
+}
+
+.speech__p{
+  margin-bottom: 1rem;
+}
+.copyButton{
+  width: 40%;
+}
+
+.return__nav{
+  background-color: var(--color1);
+  padding: 10px;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+
+.return__li{
+  text-decoration: none;
+  list-style: none;
+  font-weight: bold;
+}
+
+.return__ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+.return__li a{
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.footer{
+  height: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  color: var(--bg-color1-hover);
+}
