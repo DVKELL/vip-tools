@@ -508,15 +508,8 @@
                 </div>
 
                 <!-- Campo de Salida Oculto (Se revela tras validar) -->
-                <div class="output-container output-box hidden mt-4 pt-4 border-t border-slate-700/50 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-900/60 p-3 rounded-lg">
-                    <div class="flex items-center justify-center  w-full sm:w-auto">
-                        <span class="generated-code flex-1 code-display font-mono text-base font-extrabold text-emerald-400 bg-slate-950 px-3 py-1 rounded border border-emerald-500/30 select-all"></span>
-                    </div>
-                    <div class="flex items-center  w-full sm:w-auto justify-end">
-                        <button type="button" class="btn-copy flex flex-1 items-center gap-1 text-xs bg-slate-800 hover:bg-slate-700 border border-slate-600 text-slate-200 px-3 py-2 rounded-md font-medium transition-colors">
-                            <i class="ph ph-copy"></i> Copiar
-                        </button>
-                    </div>
+                <div class="output-container output-box hidden mt-4 pt-4 border-t border-slate-700/50 flex items-center justify-start bg-slate-900/60 p-3 rounded-lg">
+                    <span class="generated-code code-display font-mono text-base font-extrabold text-emerald-400 bg-slate-950 px-4 py-1.5 rounded border border-emerald-500/30 select-all"></span>
                 </div>
             `;
 
@@ -530,7 +523,6 @@
         const btnDelete = rowElement.querySelector(".btn-delete");
         const outputContainer = rowElement.querySelector(".output-container");
         const generatedCodeSpan = rowElement.querySelector(".generated-code");
-        const btnCopy = rowElement.querySelector(".btn-copy");
 
         // 1. Cambio de Color por Moneda
         currencySelect.addEventListener("change", (e) => {
@@ -625,15 +617,7 @@
           copyToClipboard(vipCode, true);
         });
 
-        // 4. Botón Copiar Código Individual
-        btnCopy.addEventListener("click", () => {
-          const code = generatedCodeSpan.textContent;
-          if (code) {
-            copyToClipboard(code);
-          }
-        });
-
-        // 5. Botón Eliminar Fila
+        // 4. Botón Eliminar Fila
         btnDelete.addEventListener("click", () => {
           if (rowsContainer.children.length <= 1) {
             showToast("Debes mantener al menos una fila en pantalla", "error");
